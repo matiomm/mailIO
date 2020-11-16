@@ -1,7 +1,7 @@
 <?php
 
 $rut = $_POST["rut"];
-$enunciado = "C1_{$rut}.pdf";
+$enunciado = "C2_{$rut}.pdf";
 
 if(is_file($enunciado)){
 
