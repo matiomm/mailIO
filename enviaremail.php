@@ -1,4 +1,5 @@
 <?php
+date_default_timezone_set('America/Santiago');
 
 $rut = $_POST["rut"];
 $enunciado = "C3_{$rut}.pdf";
