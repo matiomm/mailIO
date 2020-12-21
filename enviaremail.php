@@ -1,11 +1,11 @@
 <?php
 
 $rut = $_POST["rut"];
-$enunciado = "C2_{$rut}.pdf";
+$enunciado = "C3_{$rut}.pdf";
 
 if(is_file($enunciado)){
 
-    $filename = "Registro_C2.csv";
+    $filename = "Registro_C3.csv";
     $header = ["rut","hora"];
     $fyh = date('d/m/Y H:i');
     $data = [$rut,$fyh];
@@ -21,7 +21,7 @@ if(is_file($enunciado)){
     fclose($fp);
 
     header("Content-type:application/pdf");
-    header("Content-Disposition: inline;filename=Enunciado_C1.pdf");
+    header("Content-Disposition: inline;filename=Enunciado_C3.pdf");
     readfile($enunciado);
 
 //    header("Content-type: application/pdf");
