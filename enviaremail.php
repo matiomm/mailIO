@@ -2,11 +2,11 @@
 date_default_timezone_set('America/Santiago');
 
 $rut = $_POST["rut"];
-$enunciado = "C3_{$rut}.pdf";
+$enunciado = "EX_{$rut}.pdf";
 
 if(is_file($enunciado)){
 
-    $filename = "Registro_C3.csv";
+    $filename = "Registro_EX.csv";
     $header = ["rut","hora"];
     $fyh = date('d/m/Y H:i');
     $data = [$rut,$fyh];
@@ -22,7 +22,7 @@ if(is_file($enunciado)){
     fclose($fp);
 
     header("Content-type:application/pdf");
-    header("Content-Disposition: inline;filename=Enunciado_C3.pdf");
+    header("Content-Disposition: inline;filename=Enunciado_EX.pdf");
     readfile($enunciado);
 
 //    header("Content-type: application/pdf");
